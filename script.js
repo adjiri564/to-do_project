@@ -41,8 +41,6 @@ class TaskManager {
     saveTasksToLocalStorage(){
         const taskTexts = this.tasks.map(task => new Task(task.title, task.description, task.dueDate, task.priority))
         localStorage.setItem("tasks", JSON.stringify(taskTexts));
-        // const taskTexts = this.tasks.map(task => task.text);
-        // localStorage.setItem("tasks", JSON.stringify(taskTexts));
     }
 
     loadTasksFromLocalStorage() {
